@@ -6,17 +6,55 @@
  */
 
 // 1
-const contarCaracteres = (text) => console.log(text.length);
+const contarCaracteres = (text = '') => {
+    (!text)
+        ?console.warn('No ingresaste una cadena de texto')
+        :console.info(text.length);
+}
+
+contarCaracteres();
 contarCaracteres('Hola Mundo');
 
 // 2
-const recortaTexto = (text, r) => console.log(text.substr(0, r));
+const recortaTexto = (text, r = undefined) => {
+    (!text)
+        ?console.warn('No ingresaste una cadena de texto')
+    :(r === undefined) 
+        ? console.warn('No ingresaste el numero de caracteres que quieres recortar')
+    :(r < 1)
+        ? console.warn('No puedes ingresar numeros negativos')
+        : console.info(text.substr(0, r))
+}
+
+recortaTexto();
+recortaTexto('Hola Mundo');
+recortaTexto('Hola Mundo', 0);
 recortaTexto('Hola Mundo', 4);
 
 // 3
-const separaTextos = (text, s) => console.log(text.split(`${s}`));
+const separaTextos = (text, s = undefined) => {
+    (!text)
+        ?console.warn('No ingresaste una cadena de texto')
+    :(s === undefined) 
+        ? console.warn('No ingresaste el caracter separador')
+        : console.info(text.split(s))
+}
+
+separaTextos();
+separaTextos('hola que tal');
 separaTextos('hola que tal', ' ');
 
 // 4
-const repiteTexto = (text, r) => console.log(text.repeat(r));
-repiteTexto('Hola Mundo ', 3)
+const repiteTexto = (text, r = undefined) => {
+    (!text)
+        ?console.warn('No ingresaste una cadena de texto')
+    :(r === undefined) 
+        ? console.warn('No ingresaste el numero de veces que quieres repetir la cadena de texto')
+    :(r < 1)
+        ? console.warn('No puedes ingresar numeros negativos')
+        : console.info(text.repeat(r))
+}
+
+repiteTexto();
+repiteTexto('Hola Mundo ');
+repiteTexto('Hola Mundo ', 3);

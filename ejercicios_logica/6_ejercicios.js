@@ -60,7 +60,7 @@ const validaEmail = (email = undefined) => {
     }
     return console.warn(`Email: ${email}, no valido debe contener ${caracteres}`);
 }
-//
+
 
 validaEmail();
 validaEmail(5);

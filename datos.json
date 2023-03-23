@@ -1,0 +1,7 @@
+{
+	"nombre": "camilo",
+	"apellido": "bernal",
+	"edad": 28,
+	"documento": 109292,
+	"mascotas": ["bruno", "mona", "isis", 3]
+}
